@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script defer src="./index.js"></script>
+  <title>Cats browser</title>
+</head>
+
+<body>
+  <div data-loader_wr class="loader-container">
+    <div class="loader-content">
+      <span id="loader-text"></span>
+      <span class="loader"></span>
+    </div>
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <h1>Cats browser</h1>
+        <button data-action="addBtn" class="header__button">Add new cat</button>
+      </div>
+    </header>
+    <section class="cards">
+      <div data-cards_container class="cards__container">
+        <!-- cats will be inserted here -->
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <span class="footer__text">
+          SB-CATS Aleksei Morozov @editesau 2022
+        </span>
+      </div>
+
+    </footer>
+  </div>
+  <div data-action="closeModal" data-info_wr class="modal-info hidden">
+    <div class="modal-info__modal-card modal-card">
+      <div class="modal-card__top">
+        <div class="modal-card__image">
+          <img data-info_cat_img_link src="./images/no_photo.png" alt="Cat photo">
+        </div>
+        <div class="modal-card__info-block">
+          <span><span>ID: </span><span data-info_cat_id></span></span>
+          <span><span>Name: </span><span data-info_cat_name></span></span>
+          <span><span>Age: </span><span data-info_cat_age>Unknown</span></span>
+          <span><span>Rate: </span><span data-info_cat_rate>-</span><i class="fa-solid fa-star"></i></span>
+          <span><span>Is favourite?: </span><span data-info_cat_favourite></span></span>
+        </div>
+      </div>
+      <div class="modal-card__bottom">
+        <span data-info_cat_description>No description</span>
+      </div>
+    </div>
+  </div>
+  <div data-modal_form_container data-action="closeModal" class="modal-form hidden">
+    <form name="add" class="modal-form__content add-form hidden">
+      <h2>Add new cat</h2>
+      <input type="number" required min="0" class="add-form__item" name="id" placeholder="Cat id">
+      <input type="text" required class="add-form__item" name="cat_name" placeholder="Cat name">
+      <input type="number" min="0" max="10" class="add-form__item" name="rate" placeholder="Cat rating">
+
+      <input type="text" class="add-form__item" name="img_link" placeholder="Image link">
+      <div class="add-form__item">
+        <input type="checkbox" class="add-form__checkbox" name="favourite" placeholder="Cat id"><span
+          class="add-form__checkbox-label">Is favourite?</span>
+      </div>
+
+      <textarea class="add-form__item" name="description" placeholder="Cat description"></textarea>
+      <button type="submit" class="add-form__button">Submit</button>
+    </form>
+    <form data-cat_id="" name="edit" class="modal-form__content edit-form hidden">
+      <h2>Edit cat</h2>
+      <input type="number" required min="0" class="add-form__item" name="cat_id" placeholder="Cat id" disabled>
+      <input type="text" required class="add-form__item" name="cat_name" placeholder="Cat name" disabled>
+      <input type="number" min="0" max="10" class="add-form__item" name="rate" placeholder="Cat rating">
+
+      <input type="text" class="add-form__item" name="img_link" placeholder="Image link">
+      <div class="add-form__item">
+        <input type="checkbox" class="add-form__checkbox" name="favourite"><span class="add-form__checkbox-label">Is
+          favourite?</span>
+      </div>
+
+      <textarea class="add-form__item" name="description" placeholder="Cat description"></textarea>
+      <button type="submit" class="add-form__button">Save</button>
+    </form>
+  </div>
+</body>
+
+</html>
