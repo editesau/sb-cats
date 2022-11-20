@@ -381,6 +381,7 @@ document.forms.edit.addEventListener('submit', (event) => {
   } else {
     delete data.rate;
   }
+  data.name = data.cat_name;
   data.favourite = data.favourite === 'on';
   data.id = Number($editForm.dataset.cat_id);
   api.editCat(data)
