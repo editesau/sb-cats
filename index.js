@@ -254,7 +254,8 @@ class API {
   }
 }
 
-const api = new API('http://sb-cats.herokuapp.com/api/2', 'editesau');
+const api = new API('https://sb-cats.herokuapp.com/api/2', 'editesau');
+
 showLoader('Loading cats...');
 api.getAllCats()
   .then((cats) => cats.map((cat) => generateCatCard(cat)))
