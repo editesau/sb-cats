@@ -149,6 +149,8 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f2f2f2;
+    border-top: 1px solid yellowgreen
 }
 
 .footer__container {
@@ -157,8 +159,6 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
-    border-top: 1px solid yellowgreen
 }
 
 .footer__text {
